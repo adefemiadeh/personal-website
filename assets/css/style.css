@@ -140,7 +140,7 @@ body {
 }
 
 .profile img {
-  width: 400px;
+  width: 250px;
   height: 400px;
   object-fit: cover;
   border-radius: 8px;
@@ -370,67 +370,22 @@ body {
 }
 
 /* -------------------- Responsive -------------------- */
-/* ========================
-   MOBILE TEXT ADJUSTMENTS
-======================== */
 @media screen and (max-width: 768px) {
-
-  /* About/Profile Section */
-  .profile p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-
-  .social-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .social-box {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  /* Section headers */
+    .container,
+    .profile,
+    .research-section{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
   .section-header-text h1 {
     font-size: 1.8rem;
-    line-height: 2rem;
   }
 
-  /* Research Section */
-  .research-section h2,
-  .research-section h3 {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+  .section-header-wrapper {
+    height: 200px;
+    width: fit-content;
   }
-
-  .research-section p,
-  .research-section li {
-    font-size: 0.95rem;
-    line-height: 1.5rem;
-  }
-
-  .research-section img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .research-tags li {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.7rem;
-  }
-
-  /* Publications */
-  .pub-item {
-    font-size: 0.95rem;
-    padding: 0.7rem 0.85rem;
-  }
-
-  /* Section dividers */
-  .section-divider {
-    margin: 2rem 0;
+  .subheading h2 {
+    font-size: 1.4rem;
   }
 }
