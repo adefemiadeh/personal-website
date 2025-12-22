@@ -1,3 +1,4 @@
+// Current Page
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll(".header-nav a");
@@ -8,4 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add("active");
     }
   });
+});
+
+// Hamburger
+const hamburger = document.getElementById("hamburger-btn");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });

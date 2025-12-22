@@ -35,6 +35,63 @@ body {
   color: #222;
 }
 
+/* Hamburger button hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4f46e5;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 5%;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px; /* below header */
+    left: 0;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 99;
+  }
+
+  #nav-links a {
+    margin-bottom: 1rem;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+}
+
+/* Hamburger menu animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#nav-links.show {
+  display: flex;
+  animation: slideFadeIn 0.3s ease forwards;
+}
 .header-nav {
   display: flex;
   gap: 1.5rem;
@@ -78,16 +135,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
 .profile img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
   filter: grayscale(none);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
@@ -99,8 +157,9 @@ body {
 /* -------------------- Social Links / CV -------------------- */
 .social-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
   justify-content: center;
 }
 
@@ -109,10 +168,10 @@ body {
   border: 1px solid #ddd;
   border-radius: 8px;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 500;
   transition: all 0.2s ease;
-  background: #fff;
+  background: #000;
 }
 
 .social-box:hover {
@@ -126,9 +185,9 @@ body {
 .section-header-wrapper {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 450px;
   margin-bottom: 2rem;
-  border-radius: 10px;
+  border-radius: 2px;
   overflow: hidden;
 }
 
