@@ -23,7 +23,7 @@ html, body {
 
 /* -------------------- Site Header -------------------- */
 .site-header {
-    position: relative;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,6 +77,23 @@ html, body {
 
   #nav-links.show {
     display: flex;
+
+.header-nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 1.5rem;
+    flex-direction: column;
+    background: #fff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    z-index: 100;
+  }
+
+.header-nav.show{
+    display: flex;
+}
   }
 }
 
