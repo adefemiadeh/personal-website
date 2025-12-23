@@ -23,6 +23,7 @@ html, body {
 
 /* -------------------- Site Header -------------------- */
 .site-header {
+    position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,8 +53,9 @@ html, body {
   .hamburger {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 5%;
+    top: 1.2rem;
+    right: 1.5rem;
+    z-index: 101;
   }
 
   #nav-links {
